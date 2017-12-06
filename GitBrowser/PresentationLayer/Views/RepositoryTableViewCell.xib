@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepositoryTableViewCell" rowHeight="129" id="UXQ-yt-nEv" customClass="RepositoryTableViewCell" customModule="GitBrowser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXQ-yt-nEv" id="PBg-0a-8IQ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="128.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9J-Sf-0IA">
+                        <rect key="frame" x="8" y="8" width="199" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.28627450980000002" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-G3-Uni">
+                        <rect key="frame" x="215" y="8" width="152" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3l-s6-jos">
+                                <rect key="frame" x="0.0" y="0.0" width="76" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="10000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka2-Ge-oXW">
+                                <rect key="frame" x="76" y="0.0" width="76" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="isViewed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSt-AC-71t">
+                        <rect key="frame" x="215" y="101" width="152" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="HUp-2w-Xsw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.59607843140000005" green="0.20784313730000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-Rv-FzH">
+                        <rect key="frame" x="8" y="35.5" width="199" height="85"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XfT-Rv-FzH" firstAttribute="top" secondItem="c9J-Sf-0IA" secondAttribute="bottom" constant="8" id="7Y5-4B-imT"/>
+                    <constraint firstItem="hSt-AC-71t" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pTF-G3-Uni" secondAttribute="bottom" constant="8" id="93G-Cc-tcQ"/>
+                    <constraint firstItem="XfT-Rv-FzH" firstAttribute="width" secondItem="c9J-Sf-0IA" secondAttribute="width" id="A8r-4V-Std"/>
+                    <constraint firstItem="pTF-G3-Uni" firstAttribute="top" secondItem="PBg-0a-8IQ" secondAttribute="top" constant="8" id="CPk-Ia-4Qb"/>
+                    <constraint firstAttribute="bottom" secondItem="XfT-Rv-FzH" secondAttribute="bottom" constant="8" id="L1J-A5-Bux"/>
+                    <constraint firstItem="pTF-G3-Uni" firstAttribute="leading" secondItem="c9J-Sf-0IA" secondAttribute="trailing" constant="8" id="Wyt-nj-h5n"/>
+                    <constraint firstItem="XfT-Rv-FzH" firstAttribute="leading" secondItem="PBg-0a-8IQ" secondAttribute="leading" constant="8" id="hos-Nx-svo"/>
+                    <constraint firstAttribute="bottom" secondItem="hSt-AC-71t" secondAttribute="bottom" constant="8" id="iER-4a-pSn"/>
+                    <constraint firstItem="c9J-Sf-0IA" firstAttribute="leading" secondItem="PBg-0a-8IQ" secondAttribute="leading" constant="8" id="phg-qE-12h"/>
+                    <constraint firstAttribute="trailing" secondItem="pTF-G3-Uni" secondAttribute="trailing" constant="8" id="qaQ-u9-MKb"/>
+                    <constraint firstItem="hSt-AC-71t" firstAttribute="width" secondItem="pTF-G3-Uni" secondAttribute="width" id="qqc-5q-Tmx"/>
+                    <constraint firstAttribute="trailing" secondItem="hSt-AC-71t" secondAttribute="trailing" constant="8" id="wFH-y4-HD3"/>
+                    <constraint firstItem="c9J-Sf-0IA" firstAttribute="top" secondItem="PBg-0a-8IQ" secondAttribute="top" constant="8" id="zJE-JO-3fT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="XfT-Rv-FzH" id="A3X-fW-RxR"/>
+                <outlet property="isViewedLabel" destination="hSt-AC-71t" id="NNe-MC-gNK"/>
+                <outlet property="starsCountLabel" destination="Ka2-Ge-oXW" id="8hx-EI-THg"/>
+                <outlet property="titleLabel" destination="c9J-Sf-0IA" id="t2y-wf-Rgt"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

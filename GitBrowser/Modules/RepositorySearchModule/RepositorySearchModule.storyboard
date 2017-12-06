@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYm-jv-NtD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository Search View Controller-->
+        <scene sceneID="OmG-lf-YpX">
+            <objects>
+                <viewController storyboardIdentifier="RepositorySearchViewController" id="UYm-jv-NtD" customClass="RepositorySearchViewController" customModule="GitBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Msu-AD-NME">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter repository name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drA-Px-d5G">
+                                <rect key="frame" x="20" y="40" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tse-Tv-xDf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H50-eW-ycf">
+                                <rect key="frame" x="96" y="140" width="184" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vYV-0z-MWt"/>
+                                </constraints>
+                                <state key="normal" title="Show Cached Repositories"/>
+                                <connections>
+                                    <action selector="didTapShowHistory:" destination="UYm-jv-NtD" eventType="touchUpInside" id="EGr-9p-j4i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIy-yi-Rno">
+                                <rect key="frame" x="323" y="38" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="6Xk-et-KDy"/>
+                                    <constraint firstAttribute="height" constant="44" id="Txs-LR-vFk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="🔍"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSearch:" destination="UYm-jv-NtD" eventType="touchUpInside" id="3hg-NS-hBr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SIy-yi-Rno" firstAttribute="leading" secondItem="drA-Px-d5G" secondAttribute="trailing" constant="8" id="8Kd-3Q-eW3"/>
+                            <constraint firstItem="H50-eW-ycf" firstAttribute="top" secondItem="drA-Px-d5G" secondAttribute="bottom" constant="60" id="Acr-h8-g8u"/>
+                            <constraint firstItem="H50-eW-ycf" firstAttribute="centerX" secondItem="Msu-AD-NME" secondAttribute="centerX" id="RKk-4Z-ySb"/>
+                            <constraint firstItem="IjU-gf-e1f" firstAttribute="trailing" secondItem="SIy-yi-Rno" secondAttribute="trailing" constant="8" id="YMh-AD-6C5"/>
+                            <constraint firstItem="drA-Px-d5G" firstAttribute="leading" secondItem="IjU-gf-e1f" secondAttribute="leading" constant="20" id="bGQ-FO-VME"/>
+                            <constraint firstItem="drA-Px-d5G" firstAttribute="top" secondItem="IjU-gf-e1f" secondAttribute="top" constant="20" id="ibQ-RQ-JyB"/>
+                            <constraint firstItem="SIy-yi-Rno" firstAttribute="centerY" secondItem="drA-Px-d5G" secondAttribute="centerY" id="uHQ-GU-bfv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IjU-gf-e1f"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="drA-Px-d5G" id="99k-ss-MPi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="La2-Sg-x6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="85"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DNI-bB-4ds">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository Detail Module View Controller-->
+        <scene sceneID="msz-Bh-r06">
+            <objects>
+                <viewController id="DNI-bB-4ds" customClass="RepositoryDetailModuleViewController" customModule="GitBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WGc-iH-g9y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pe0-Kq-Zgt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QbK-Ep-Olr" appends="YES" id="sfH-cf-7IE"/>
+                                </connections>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-VY-cgw">
+                                <rect key="frame" x="30" y="50" width="315" height="543"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBx-dr-33e">
+                                <rect key="frame" x="30" y="593" width="315" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CYc-Fp-NU1"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="didTapClose:" destination="DNI-bB-4ds" eventType="touchUpInside" id="q5q-G9-0YN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FJa-VY-cgw" firstAttribute="top" secondItem="ahH-ZZ-nJh" secondAttribute="top" constant="30" id="5Fn-Zw-uDr"/>
+                            <constraint firstItem="wBx-dr-33e" firstAttribute="top" secondItem="FJa-VY-cgw" secondAttribute="bottom" id="6FJ-3T-sxY"/>
+                            <constraint firstItem="pe0-Kq-Zgt" firstAttribute="top" secondItem="ahH-ZZ-nJh" secondAttribute="top" id="8Vj-aw-xe9"/>
+                            <constraint firstItem="pe0-Kq-Zgt" firstAttribute="leading" secondItem="ahH-ZZ-nJh" secondAttribute="leading" id="B8A-eV-9QI"/>
+                            <constraint firstItem="wBx-dr-33e" firstAttribute="leading" secondItem="ahH-ZZ-nJh" secondAttribute="leading" constant="30" id="UHz-MI-6AW"/>
+                            <constraint firstItem="FJa-VY-cgw" firstAttribute="leading" secondItem="ahH-ZZ-nJh" secondAttribute="leading" constant="30" id="UgP-ii-aUn"/>
+                            <constraint firstItem="ahH-ZZ-nJh" firstAttribute="trailing" secondItem="FJa-VY-cgw" secondAttribute="trailing" constant="30" id="cKV-H3-RGy"/>
+                            <constraint firstItem="ahH-ZZ-nJh" firstAttribute="trailing" secondItem="pe0-Kq-Zgt" secondAttribute="trailing" id="f2A-HQ-WyD"/>
+                            <constraint firstItem="ahH-ZZ-nJh" firstAttribute="trailing" secondItem="wBx-dr-33e" secondAttribute="trailing" constant="30" id="ffg-34-THM"/>
+                            <constraint firstItem="ahH-ZZ-nJh" firstAttribute="bottom" secondItem="pe0-Kq-Zgt" secondAttribute="bottom" id="pVQ-rb-eCm"/>
+                            <constraint firstItem="ahH-ZZ-nJh" firstAttribute="bottom" secondItem="wBx-dr-33e" secondAttribute="bottom" constant="30" id="reg-Qr-VCJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ahH-ZZ-nJh"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="FJa-VY-cgw" id="h49-IQ-YWf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEZ-R4-HjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="QbK-Ep-Olr">
+                    <connections>
+                        <action selector="didGesturePerform:" destination="DNI-bB-4ds" id="Adh-dq-XtY"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-93.599999999999994" y="90.404797601199405"/>
+        </scene>
+    </scenes>
+</document>

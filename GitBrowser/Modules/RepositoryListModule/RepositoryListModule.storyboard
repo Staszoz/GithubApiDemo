@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Udu-ew-rIP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository List Module View Controller-->
+        <scene sceneID="fXc-Vs-nIQ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Udu-ew-rIP" customClass="RepositoryListModuleViewController" customModule="GitBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vH4-MP-LVP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-5x-nf1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Udu-ew-rIP" id="cW6-bh-1t8"/>
+                                    <outlet property="delegate" destination="Udu-ew-rIP" id="Sda-Q8-DAh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GWc-5x-nf1" firstAttribute="leading" secondItem="ma8-b9-J9p" secondAttribute="leading" id="Gig-zt-6pg"/>
+                            <constraint firstItem="ma8-b9-J9p" firstAttribute="trailing" secondItem="GWc-5x-nf1" secondAttribute="trailing" id="Hf5-D1-Ddc"/>
+                            <constraint firstItem="ma8-b9-J9p" firstAttribute="bottom" secondItem="GWc-5x-nf1" secondAttribute="bottom" id="UxC-5L-E6V"/>
+                            <constraint firstItem="GWc-5x-nf1" firstAttribute="top" secondItem="ma8-b9-J9p" secondAttribute="top" id="hcz-i8-962"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ma8-b9-J9p"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="GWc-5x-nf1" id="lSR-IA-9U1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJD-DX-F0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="167"/>
+        </scene>
+    </scenes>
+</document>
