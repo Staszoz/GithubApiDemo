@@ -19,6 +19,6 @@ public struct AppSettings {
             NSAttributedStringKey.foregroundColor: UIColor.black
         ]
         UINavigationBar.appearance().prefersLargeTitles = true
-        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().tintColor = .white
     }
 }
